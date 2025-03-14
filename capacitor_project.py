@@ -10,10 +10,11 @@ def capacitor_voltage(t, voltage_max, R, C, charge=True):
 voltage_max = 5  
 res_vals = [1e3, 10e3] 
 cap_vals = [1e-6, 10e-6]  
-time = np.linspace(0, 0.1, 1000) #for time vector
+time = np.linspace(0, 0.1, 1000) #for time vector from 0-0.1s
 
 plt.figure(figsize=(10, 5))
 
+# for loops to plot various values for R and C
 for R in res_vals:
     for C in cap_vals:
         v_charge = capacitor_voltage(time, voltage_max, R, C, charge=True)
