@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 
 def capacitor_voltage(t, voltage_max, R, C, charge=True):
     if charge:
-        return voltage_max * (1 - np.exp(-t / (R * C)))
+        return voltage_max * (1 - np.exp(-t / (R * C)))       #charging eqn
     else:
-        return voltage_max * np.exp(-t / (R * C)) 
+        return voltage_max * np.exp(-t / (R * C))             #discharging eqn
 
 voltage_max = 5  
 res_vals = [1e3, 10e3] 
